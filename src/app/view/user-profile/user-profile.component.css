@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    box-shadow: 0 0 16px rgb(0 0 0 / 15%);
+}
+
+.container {
+    width: 60%;
+    height: 100%;
+    margin: auto;
+}
+
+.account-selection {
+    position: absolute;
+    width: 130px;
+    height: 100px;
+    top: 100%;
+    right: -10px;
+    z-index: 5;
+    box-shadow: 0 0 25px rgb(63 78 100 / 15%);
+    visibility: hidden;
+    list-style: none;
+    background: transparent;
+}
+
+.account-selection li {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: solid 1px #dddddd;
+    justify-content: space-around;
+}
+
+.account-selection li:hover {
+    cursor: pointer;
+    color: rgb(110, 107, 107);
+    transition: 0.3s;
+}
+
+.arrow-down {
+    font-size: 11px;
+    margin-left: 5px;
+}
+
+.main-header {
+    width: 60%;
+    height: 90px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between
+}
+
+.logo-side {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    width: 50%;
+    height: 100%;
+}
+
+.navbar-menu {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+    width: 56%;
+    height: 100%;
+}
+
+.navbar-menu a {
+    color: #000000;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration-line: none;
+    user-select: none;
+}
+
+.navbar-menu a:hover {
+    cursor: pointer;
+    color: rgb(110, 107, 107);
+    transition: 0.3s;
+}
+
+.navbar-user {
+    width: 18%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.navbar-user a {
+    color: #000000;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration-line: none;
+}
+
+.navbar-user a:hover {
+    cursor: pointer;
+    color: rgb(110, 107, 107);
+    transition: 0.3s;
+}
+
+.btn-main a {
+    font-size: 35px;
+    text-decoration-line: none;
+    color: #000000;
+}
+
+.main-body {
+    margin-top: 50px;
+}
+
+.row {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: left;
+    position: relative;
+}
+
+.main-left-body {
+    width: 20%;
+    height: 200px;
+    margin-right: 100px;
+}
+
+.main-right-body {
+    width: 70%;
+    height: 200px;
+    position: relative;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.profile-info {
+    display: flex;
+    justify-content: left;
+}
+
+.profile-photo button {
+    border: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.edit-profile-btn {
+    background-color: transparent;
+    border: 1px solid #dbdbdb;
+    color: #262626;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 110px;
+    font-family: auto;
+    margin-left: 50px;
+}
+
+.profile-settings-btn {
+    position: absolute;
+    right: 50%;
+    font-size: 20px;
+    border: none;
+    background: none;
+}

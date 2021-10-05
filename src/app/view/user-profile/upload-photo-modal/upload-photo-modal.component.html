@@ -1,0 +1,18 @@
+<div class="modal fade" id="uploadPhotoModal" tabindex="-1" aria-labelledby="uploadPhotoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="profile-photo">
+                <img #profilePhoto [src]="imageUrl" alt="Your Profile Photo">
+            </div>
+        </div>
+        <div class="modal-body">
+            <input type="file" (change)="selectPhotoHandler($event)" #uploadFileInp  name="fileName" style="display: none;">
+            <button (click)="uploadFileInp.click()" class="btn btn-choose">Choose Photo</button>
+            <button (click)="removePhoto()" class="btn btn-remove">Remove Current Photo</button>
+            <button (click)="uploadPhoto()" class="btn btn-upload">Submit Photo</button>
+            <button class="btn btn-cancel" (click)="closeWindow()" data-bs-dismiss="modal" #closeWindowBtn>Cancel</button>
+        </div>
+    </div>
+</div>
+</div>

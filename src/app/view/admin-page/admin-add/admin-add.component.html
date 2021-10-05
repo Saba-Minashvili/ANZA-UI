@@ -1,0 +1,87 @@
+<section class="item-add">
+    <div class="row">
+        <form 
+        #form="ngForm" 
+        [formGroup]="itemAdd"
+        (ngSubmit)="onItemAddSubmit()">
+        <div class="form-group">
+            <label for="file"></label>
+            <input type="file"
+            id="file"
+            #fileInput
+            (change)="onFileSelected($event)"
+            required
+            accept="image/*"
+            formControlName="ItemPhoto">
+            <button (click)="onFileUpload()">Upload Photo</button>
+        </div>
+        <div class="form-group">
+            <label for="item-type">Item Type</label>
+            <select (change)="selectChangeHandler($event)" required formControlName="Type" name="item-types" class="form-control">
+                <option #selectedTypeId *ngFor="let item of filteredItemTypes" value="{{item.ItemTypeId}}">{{item.ItemType}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="item-name">Item Name</label>
+            <input 
+            name="item-name"
+            required
+            formControlName="Name"
+            placeholder="Enter Item Name"
+            type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="item-color">Item Color</label>
+            <select required formControlName="Color" name="item-colors" class="form-control">
+                <option *ngFor="let item of itemColors">{{item.ItemColor}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="item-size">Item Size</label>
+            <select  required formControlName="Size" name="item-sizes" class="form-control">
+                <option *ngFor="let item of itemSizes">{{item.ItemSize}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="item-material">Item Material</label>
+            <select  required formControlName="MaterialType" name="item-material" class="form-control">
+                <option *ngFor="let item of filteredMaterialTypes">{{item.MaterialTypeName}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="designed-for">DesignedFor</label>
+            <select required formControlName="DesignedFor" name="designed-for" class="form-control">
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+                <option value="3">Baby</option>
+                <option value="4">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label  required for="item-price">Item price</label>
+            <input 
+            #itemPrice
+            name="item-price"
+            required
+            formControlName="Price"
+            placeholder="Enter Item Price"
+            type="number" class="form-control">
+        </div>
+        <div class="form-group">
+            <label  required for="item-description">Item Description</label>
+            <textarea
+            #itemDesc
+            name="item-description"
+            required
+            formControlName="Description"
+            placeholder="Describe Item"
+            class="form-control" 
+            cols="20" rows="5"></textarea>
+        </div>
+        <button 
+        type="submit" 
+        [disabled]="!form.valid"
+        class="btn btn-dark btn-block">Add Item</button>
+        </form>
+    </div>
+</section>

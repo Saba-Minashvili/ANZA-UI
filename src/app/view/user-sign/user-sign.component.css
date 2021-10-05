@@ -1,0 +1,35 @@
+.custom-row {
+    width:70%;
+    margin:150px auto;
+    display: flex;
+    justify-content: space-between;
+}
+aside {
+    width:48%;
+}
+
+.custom-row img {
+    width:100%;
+    object-fit: cover;
+}
+
+.custom-row .nav {
+    background-color: rgb(247, 247, 247);
+}
+
+.custom-row .nav li {
+    width:50%;
+    text-align: center;
+}
+.custom-row .nav li:first-child {
+    border-right: 1px solid rgb(210,210,210);
+}
+
+.custom-row .nav li a {
+    color:#000000;
+    font-weight: 500;
+}
+
+.custom-active {
+    border-bottom: 3px solid #000000;
+}

@@ -1,0 +1,22 @@
+.item-add {
+    width: 70%;
+    height: auto;
+    margin: auto;
+}
+.btn {
+    background-color: transparent;
+    border: 1px solid #dbdbdb;
+    color: black;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.btn:focus {
+    outline: 0 !important;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+}
+
+.btn-upload {
+    color: #0095f6;
+}

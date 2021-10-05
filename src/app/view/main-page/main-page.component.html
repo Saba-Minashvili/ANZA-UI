@@ -1,0 +1,57 @@
+<header>
+  <div class="top-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="top-nav-left">The right choice and special beauty </div>
+        </div>
+        <div class="col-md-6">
+          <div class="top-nav-right">
+            <a (click)="showAccountWindow()" #accountCnt #myAccount> My Account  <i class="fas fa-chevron-down arrow-down"></i></a>
+            <ul #accountSelection class="account-selection">
+              <li #selectionFirst routerLinkActive="active" routerLink="/user-sign/in"><i class="fas fa-sign-in-alt"></i>Sign in</li>
+              <li #selectionSecond routerLinkActive="active" routerLink="/user-sign/up"><i class="fas fa-user-plus"></i>Register</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-header">
+    <div class="logo-side">
+      <div class="btn-main">
+        <a routerLinkActive="active" routerLink="">ANZA</a>
+      </div>
+    </div>
+    <nav class="navbar">
+      <ul class="navbar-menu">
+        <li><a #btnHome class="btnHome" routerLinkActive="active" routerLink="">Home</a></li>
+        <li><a #btnShop class="btnShop">Shop</a></li>
+        <li><a #btnContact class="btnContact">Contact</a></li>
+      </ul>
+      <ul class="navbar-user">
+        <li class="btn-search" #searchBtn><a><i class="fas fa-search"></i></a></li>
+        <li class="btn-profile" #profileCnt #profileBtn (click)="showProfileWindow()"><a><i class="fas fa-user-alt"></i></a></li>
+        <li class="btn-liked-items"><a><i class="fas fa-shopping-cart"></i></a></li>
+      </ul>
+      <ul #profileSelection class="profile-selection">
+        <li #selectionFirst routerLinkActive="active" routerLink="profile"><i class="fas fa-user-circle"></i>Profile</li>
+        <li #selectionSecond (click)="onLogOutBtnClick()"><i class="fas fa-sign-out-alt"></i>Log out</li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<body>
+  <div class="main-slider">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="main-slider-content">
+            <h6>Spring/Summer Collection 2021</h6>
+            <h1>Get up to 30% Off New Arrivals</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

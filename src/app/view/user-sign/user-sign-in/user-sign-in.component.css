@@ -1,0 +1,20 @@
+form {
+    margin-top: 50px;
+    height: 230px;
+    display: grid;
+}
+
+.signInBtn {
+    width: 100%;
+}
+
+.form-group label {
+    font-size: 18px;
+    padding-bottom: 4px;
+}
+
+.invalidValuesWarn {
+    font-size: 13px;
+    color: orangered;
+    visibility: hidden;
+}

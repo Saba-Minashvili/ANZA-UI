@@ -1,0 +1,12 @@
+<!-- Modal -->
+<div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-body">
+            <input type="file" #uploadFileInp  name="fileName" style="display: none;">
+            <button class="btn btn-change-address">Add Your Address</button>
+            <button class="btn btn-change-password">Change Password</button>
+            <button class="btn btn-log-out" (click)="onLogOutBtnClick()" #logOutBtn>Log out</button>
+            <button class="btn btn-cancel" data-bs-dismiss="modal" #closeWindowBtn>Cancel</button>
+        </div>
+    </div>
+</div>

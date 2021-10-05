@@ -1,0 +1,16 @@
+form {
+    margin-top: 50px;
+    height: 450px;
+    display: grid;
+}
+
+.form-group label {
+    font-size: 18px;
+    padding-bottom: 4px;
+}
+
+.optionalInpWarn {
+    font-size: 10px;
+    display: inline;
+    color: lightslategray;
+}

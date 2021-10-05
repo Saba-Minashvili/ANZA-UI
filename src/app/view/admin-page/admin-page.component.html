@@ -1,0 +1,36 @@
+<header>
+    <div class="main-header">
+      <nav class="navbar">
+        <ul class="navbar-menu">
+          <li><a #btnAdd class="btn btn-add" routerLinkActive="active" routerLink="add">Add Item</a></li>
+        </ul>
+      </nav>
+    </div>
+</header>
+<body>
+  <div class="container">
+    <div class="row">
+      <p style="font-size: 30px; margin-bottom: 50px;">All items</p>
+      <section class="data-view">
+        <div *ngFor="let item of filteredItems" #item class="card card-{{item.id}}" style="width: 18rem;">
+          <div class="card-img-top">
+            <img class="card-img" src="{{item.itemPhoto}}" alt="Card image cap">
+          </div>
+          <div class="card-head">
+            <h5 class="card-title">{{item.name}}</h5>
+          </div>
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="card-text"><b>Description</b>: {{item.description}}</li>
+              <li class="list-group-item"><b>Item Type</b>: {{item.type}}</li>
+              <li class="list-group-item"><b>Color</b>: {{item.color}}</li>
+              <li class="list-group-item"><b>Size</b>: {{item.size}}</li>
+            </ul>
+          </div>
+          <button (click)="deleteItem()" class="btn btn-delete-item">Delete item</button>
+        </div>
+      </section>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</body>
